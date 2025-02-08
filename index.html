@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main-container">
+    <!-- Sign Up Form -->
+    <div class="container2" id="singup">
+        <h2>Create Your Account</h2>
+        <form action="#"  onsubmit="return false">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            </div>
+
+            <!-- Dropdown for Buyer / Vendor -->
+            <div class="form-group">
+                <label for="user-type">I am a</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="buyer">Buyer</option>
+                    <option value="vendor">Vendor</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign   </button>
+        
+
+            <p>Already have an account? <span onclick="changelogin()" class="bluecolor">Log in</span></p>
+       
+      </form>
+    </div>
+
+    
+    <div class="container hidden" id="login">
+        <h2>Login to Your Account</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Dropdown for Buyer / Vendor -->
+            <div class="form-group">
+                <label for="user-type">I am a</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="buyer">Buyer</option>
+                    <option value="vendor">Vendor</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <span onclick="changesignup()" class="bluecolor">Sign up</span></p>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
+
+
+
