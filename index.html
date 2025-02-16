@@ -15,13 +15,13 @@
         <h2>Create Your Account</h2>
         <form action="#"  onsubmit="return false">
             <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email1">Email Address</label>
+                <input type="email" id="email" name="emails" placeholder="Enter your email" required id>
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <label for="password1">Password</label>
+                <input type="password" id="password" name="passwords" placeholder="Enter your password" required>
             </div>
 
             <div class="form-group">
@@ -37,13 +37,13 @@
             <!-- Dropdown for Buyer / Vendor -->
             <div class="form-group">
                 <label for="user-type">I am a</label>
-                <select id="user-type" name="user-type" required>
+                <select id="role" name="user-type" required>
                     <option value="buyer">Buyer</option>
                     <option value="vendor">Vendor</option>
                 </select>
             </div>
 
-            <button type="submit" class="btn-submit">Sign   </button>
+            <button type="submit" class="btn-submit" onclick="sign()">Sign   </button>
         
 
             <p>Already have an account? <span onclick="changelogin()" class="bluecolor">Log in</span></p>
@@ -84,6 +84,7 @@
 </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
 </html>
 
