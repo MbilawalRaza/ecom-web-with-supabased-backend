@@ -3,7 +3,7 @@ const login = document.getElementById('login')
 
 
 
-function  changelogin(){
+function changelogin(){
     console.log(signup,login)
     console.log('run')
 signup.classList.add('hidden')
@@ -18,11 +18,6 @@ function changesignup (){
     signup.classList.remove('hidden')
  
 }
-
-
-
-
-
 
 
 
@@ -71,4 +66,61 @@ const { data, error } = await supabaseClient.auth.signUp({
 
   console.log(tableData)
 }
+
+
+const emailSignin = document.getElementById('email')
+const passSignin = document.getElementById('password')
+// console.log(emailSignin,passSignin)
+async function signn(){
+  const email = emailSignin.value
+  const pasword = passSignin.value
+
+
+  const { data, error , } = await 
+   supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: email,
+  })
+ 
+
+  if(error){
+    alert('login fail')
+    console.log(error)
+    return
+
+  }
+  const { data: tableData, error: tableError } = await supabaseClient 
+  .from('user')
+  .select()
+  .eq('uid', data.user.id)
+  .single()
+
+
+  if(tableData.role === 'buyer'){
+    window.location.href = '/buyer.html'
+  }else if(tableData.role === 'vendor'){
+    window.location.href = '/vendor.html'
+  }else{
+    alert('no role match')}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
